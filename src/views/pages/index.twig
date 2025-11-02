@@ -1,0 +1,9 @@
+{% extends 'layouts/master.twig' %}
+
+{% block content %}
+  {% component 'home.hero-banners' %}
+
+  {# Built-in features list from twilight.json #}
+  {% component 'home.featured-products-1' with {'title': 'الأكثر مبيعًا'} %}
+  {% component 'home.latest-products' with {'title': 'وصل حديثًا'} %}
+{% endblock %}

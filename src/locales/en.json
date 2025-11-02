@@ -1,0 +1,15 @@
+{
+  "header": {
+    "menu": "Menu",
+    "search": "Search",
+    "account": "Account",
+    "cart": "Cart"
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  },
+  "home": {
+    "new_arrivals": "New Arrivals",
+    "best_sellers": "Best Sellers"
+  }
+}

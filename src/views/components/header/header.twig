@@ -1,0 +1,20 @@
+<header class="header">
+  <div class="container p-4 flex items-center justify-between">
+    <a class="header__brand" href="/">
+      {% if 'logo' | setting %}
+        <img src="{{ 'logo' | setting | asset }}" alt="{{ store.name }}">
+      {% else %}
+        <strong>{{ store.name }}</strong>
+      {% endif %}
+    </a>
+    <nav class="nav flex items-center gap-2">
+      <a href="/products">{{ 'home.best_sellers' | t }}</a>
+      <a href="/brands">{{ 'Brands' | t }}</a>
+      <a href="/page/about">{{ 'About' | t }}</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <button class="btn btn--outline" onclick="document.querySelector('salla-search').open()">بحث</button>
+      <a class="btn" href="/cart">{{ 'header.cart' | t }}</a>
+    </div>
+  </div>
+</header>

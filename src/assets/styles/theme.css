@@ -1,0 +1,19 @@
+/* Theme overrides driven by twilight.json settings */
+:root {
+  --color-primary: {{ 'color_primary' | setting | default('#0E5A3A') }};
+  --color-accent: {{ 'color_accent' | setting | default('#C6A15B') }};
+  --color-bg: {{ 'color_bg' | setting | default('#F8F7F5') }};
+  --color-text: {{ 'color_text' | setting | default('#111827') }};
+  --radius: {{ 'radius' | setting | default(12) }}px;
+}
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+.header__brand img { height: 40px; }
+.nav a { color: var(--color-text); text-decoration:none; padding: 8px 12px; border-radius: 8px; }
+.nav a:is(:hover, :focus) { background: rgba(0,0,0,.04); }
+.footer { background: #0f172a; color: #f1f5f9; padding: 24px 0; }

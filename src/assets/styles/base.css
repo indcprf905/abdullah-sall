@@ -1,0 +1,33 @@
+:root {
+  --color-primary: #0E5A3A;
+  --color-accent: #C6A15B;
+  --color-bg: #F8F7F5;
+  --color-text: #111827;
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+
+html { direction: rtl; }
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Tajawal', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Noto Kufi Arabic', sans-serif;
+  line-height: 1.6;
+}
+
+.container { max-width: 1200px; margin-inline: auto; padding: 0 16px; }
+.btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  padding: 12px 20px; border-radius: var(--radius); box-shadow: var(--shadow);
+  background: var(--color-primary); color: #fff; text-decoration: none;
+}
+.btn--outline { background: transparent; color: var(--color-primary); border: 1px solid var(--color-primary); }
+
+.card { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+.grid { display: grid; gap: 16px; }
+.grid--products { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+
+/* Utilities */
+.text-center { text-align: center; }
+.mt-2 { margin-top: .5rem; } .mt-4 { margin-top: 1rem; } .mt-8 { margin-top: 2rem; }
+.p-4 { padding: 1rem; } .p-6 { padding: 1.5rem; }

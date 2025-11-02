@@ -1,0 +1,99 @@
+{
+  "version": "1.0.0",
+  "theme_name": "ABD Premium",
+  "repo_url": "https://github.com/abdullah-dev/abdullahdev-salla-theme",
+  "support_url": "https://example.com/support",
+  "settings": [
+    {
+      "type": "string",
+      "id": "logo",
+      "label": "Logo",
+      "format": "image"
+    },
+    {
+      "type": "color",
+      "id": "color_primary",
+      "label": "Primary Color",
+      "value": "#0E5A3A"
+    },
+    {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Accent Color",
+      "value": "#C6A15B"
+    },
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "Background",
+      "value": "#F8F7F5"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "Text",
+      "value": "#111827"
+    },
+    {
+      "type": "boolean",
+      "id": "sticky_header",
+      "label": "Sticky Header",
+      "format": "switch",
+      "selected": true
+    },
+    {
+      "type": "number",
+      "id": "radius",
+      "label": "Border Radius (px)",
+      "value": 12
+    }
+  ],
+  "features": [
+    "component-featured-products",
+    "component-fixed-banner",
+    "component-fixed-products",
+    "component-photos-slider",
+    "component-products-slider",
+    "component-parallax-background",
+    "component-store-features",
+    "filters"
+  ],
+  "components": [
+    {
+      "name": "hero-banners",
+      "title": "Hero Banners (Custom)",
+      "icon": "sicon-image-carousel",
+      "path": "home.hero-banners",
+      "fields": [
+        {
+          "id": "slides",
+          "type": "collection",
+          "format": "collection",
+          "required": true,
+          "minLength": 1,
+          "maxLength": 5,
+          "fields": [
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image"
+            },
+            {
+              "id": "link",
+              "type": "string",
+              "label": "Link URL",
+              "format": "url"
+            },
+            {
+              "id": "overlay",
+              "type": "boolean",
+              "label": "Dark Overlay",
+              "format": "switch",
+              "selected": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

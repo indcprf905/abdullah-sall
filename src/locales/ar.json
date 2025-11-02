@@ -1,0 +1,15 @@
+{
+  "header": {
+    "menu": "القائمة",
+    "search": "بحث",
+    "account": "حسابي",
+    "cart": "السلة"
+  },
+  "footer": {
+    "rights": "جميع الحقوق محفوظة"
+  },
+  "home": {
+    "new_arrivals": "وصل حديثًا",
+    "best_sellers": "الأكثر مبيعًا"
+  }
+}

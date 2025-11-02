@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ store.name ?? 'متجر' }}</title>
+
+  {% block styles %}
+    <link rel="stylesheet" href="{{ 'assets/styles/base.css' | asset }}">
+    <link rel="stylesheet" href="{{ 'assets/styles/theme.css' | asset }}">
+  {% endblock %}
+
+  {% hook 'head:end' %}
+</head>
+<body class="min-h-screen">
+  <div class="app-inner flex flex-col min-h-full">
+    {% hook 'body:start' %}
+    {% component 'header.header' %}
+
+    <main class="container mt-8">
+      {% block content %}{% endblock %}
+    </main>
+
+    {% component 'footer.footer' %}
+  </div>
+  {% hook 'body:end' %}
+
+  <script defer src="{{ 'assets/js/app.js' | asset }}"></script>
+
+  <!-- Twilight Web Components are injected automatically by the engine -->
+  <salla-offer-modal></salla-offer-modal>
+  <salla-search></salla-search>
+  {% if user.type=='guest' %}<salla-login-modal></salla-login-modal>{% endif %}
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>

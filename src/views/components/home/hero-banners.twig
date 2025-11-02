@@ -1,0 +1,14 @@
+<section class="card">
+  <div class="p-6">
+    <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
+      {% for slide in component.slides %}
+        <a href="{{ slide.link }}" class="block" style="position:relative;">
+          <img src="{{ slide.image | asset }}" alt="" style="width:100%; height:240px; object-fit:cover; border-radius: var(--radius);">
+          {% if slide.overlay %}
+          <span style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.35));border-radius: var(--radius);"></span>
+          {% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
